@@ -15,7 +15,7 @@ def predict(prompt):
 
 with gr.Blocks() as demo:
     # Create a text block
-    text_box = gr.TextBox(placeholder="Enter text block to summarize", lines=4)
+    text_box = gr.Textbox(placeholder="Enter text block to summarize", lines=4)
     gr.Interface(fn=predict, inputs=text_box, outputs="text")
 
 demo.launch()
